@@ -47,4 +47,4 @@ class questao4:
     
 q4 = questao4
 
-print("Notebook pronto para uso")
+print("\033[1mNotebook pronto para uso\033[0m")
