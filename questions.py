@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 df7 = pd.read_csv('https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2017.csv', sep=';', index_col='idProposicao')
 df6 = pd.read_csv('https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2016.csv', sep=';', index_col='idProposicao')
 df5 = pd.read_csv('https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2015.csv', sep=';', index_col='idProposicao')
@@ -65,6 +64,7 @@ df_2016.info()""")
     print("Nada a checkar!")
     
 q3 = questao3
+
 class questao4:
   def solution():
     print("Solução:\nFaça com que todas as tabelas sejam parte apenas da tabela df\ndf = df_2015.append(df_2016).append(df_2017)")
