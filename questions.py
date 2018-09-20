@@ -46,3 +46,5 @@ class questao4:
     print("Utilize o método \033[1mdataFrame.append(dataFrame)\033[0m")
     
 q4 = questao4
+
+print("Notebook pronto para uso")
