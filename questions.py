@@ -178,7 +178,7 @@ q8 = questao8
 
 class questao9:
   def solution():
-    print("print(df['tipoAutor'].value_counts()[:4])")
+    print("""print(df['tipoAutor'].value_counts()[:4])""")
   def hint():
     print("Utilize o método series.value_count() em 'tipoAutor'.")
   def check():
