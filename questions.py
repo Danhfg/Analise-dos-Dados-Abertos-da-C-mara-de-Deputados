@@ -152,7 +152,7 @@ print(qnt_brasil)""")
         print("\033[92mCorreto\033[0m: Valores calculados de forma correta!")
     except ValueError:
       print("\033[91mErrado\033[0m: As variáveis não foram criadas corretamente!")
-      
+
 q7 = questao7
 
 media_prop_teste = dfg11['nomeAutor'].value_counts().mean()
