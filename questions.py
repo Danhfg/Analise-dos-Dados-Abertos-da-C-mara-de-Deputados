@@ -52,7 +52,7 @@ df_2015.head(4)""")
         print("\033[91mErrado\033[0m: a variável df_2015 não foi criada corretamente, certifique-se de utilizar o separador ';' e o index a coluna 'idProposicao'")
         return None
       print("\033[92mCorreto\033[0m: DataFrames criados corretamente")
-    except ValueError:
+    except:
       print("\033[91mErrado\033[0m: as variável não foram criadas corretamente, certifique-se de utilizar o separador ';' e o index a coluna 'idProposicao'")
 
     
@@ -83,7 +83,7 @@ class questao4:
         print("\033[92mCorreto\033[0m: DataFrame df criado corretamente")
       else:
         print("\033[91mErrado\033[0m: a variável df não foi criada corretamente, certifique-se de juntar todos os 3 dataFrames (lembre-se de seguir a ordem 2015, 2016, 2017) )!")
-    except ValueError:
+    except:
       print("\033[91mErrado\033[0m: a variável df não foi criada corretamente, certifique-se de juntar todos os 3 dataFrames (lembre-se de seguir a ordem 2015, 2016, 2017) )!")
 
     
@@ -101,7 +101,7 @@ class questao5:
         print("\033[92mCorreto\033[0m: DataFrame df_rn criado corretamente")
       else:
         print("\033[91mErrado\033[0m: a variável df_rn não foi criada corretamente (verifique os nomes das colunas para identificar a correta e selecionar 'RN').")
-    except ValueError:
+    except:
       print("\033[91mErrado\033[0m: a variável df_rn não foi criada corretamente (verifique os nomes das colunas para identificar a correta e selecionar 'RN').")
 
 
@@ -119,7 +119,7 @@ class questao6:
         print("\033[92mCorreto\033[0m: DataFrame df_rn criado corretamente!")
       else:
         print("\033[91mErrado\033[0m: df_rn não foi criado corretamente!")
-    except ValueError:
+    except:
       print("\033[91mErrado\033[0m: df_rn não foi criado corretamente!")
 
 
@@ -150,7 +150,7 @@ print(qnt_brasil)""")
         print("\033[91mErrado\033[0m: porcen_br não foi criado corretamente!")
       else:
         print("\033[92mCorreto\033[0m: Valores calculados de forma correta!")
-    except ValueError:
+    except:
       print("\033[91mErrado\033[0m: As variáveis não foram criadas corretamente!")
 
 q7 = questao7
@@ -170,7 +170,7 @@ print(prop_number[ prop_number > media_prop ] )""")
         print("\033[92mCorreto\033[0m: Valor calculado de forma correta!")
       else:
         print("\033[91mErrado\033[0m: media_prop não foi criado corretamente!")
-    except ValueError:
+    except:
       print("\033[91mErrado\033[0m: media_prop não foi criado corretamente!")
 
 
@@ -200,7 +200,7 @@ print(max_partido)""")
         print("\033[92mCorreto\033[0m: Parabéns, você finalizou o notebook!")
       else:
         print("\033[91mErrado\033[0m: max_partidos não foi criado corretamente!")
-    except ValueError:
+    except:
       print("\033[91mErrado\033[0m: max_partidos não foi criado corretamente!")
       
 q10 = questao10
