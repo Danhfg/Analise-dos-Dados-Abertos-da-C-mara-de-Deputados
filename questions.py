@@ -32,7 +32,7 @@ df_2016 = pd.read_csv('https://dadosabertos.camara.leg.br/arquivos/proposicoesAu
 df_2015 = pd.read_csv('https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2015.csv', sep=';', index_col='idProposicao')
 
 # Imprima as 4 primeiras linhas de cada tabela
-print(df_2017.head(4))
+
 print(df_2016.head(4))
 df_2015.head(4)""")
   def hint():
