@@ -78,4 +78,100 @@ class questao4:
     
 q4 = questao4
 
+df_rn_teste = dfg11[dfg11['siglaUFAutor'] == 'RN']
+class questao5:
+  def solution():
+    print("df_rn = df[df['siglaUFAutor'] == 'RN']\ndf_rn.head(3)")
+  def hint():
+    print("Você pode tentar utilizar a seguinte sintaxe: novo_df = nome_df[nome_df['coluna'] == 'opção']")
+  def check():
+    if (str(df_rn_teste) == str(df_rn)):
+      print("\033[92mCorreto\033[0m: DataFrame df_rn criado corretamente")
+    else:
+      print("\033[91mErrado\033[0m: a variável df_rn não foi criada corretamente (verifique os nomes das colunas para identificar a correta e selecionar 'RN').")
+
+q5 = questao5
+
+prop_number_teste = df_rn_teste['nomeAutor'].value_counts()
+class questao6:
+  def solution():
+    print("prop_number = df_rn['nomeAutor'].value_counts()\nprint(prop_number)")
+  def hint():
+    print("O método df.value_counts pode ser útil!")
+  def check():
+    if (str(prop_number_teste) == str(prop_number)):
+      print("\033[92mCorreto\033[0m: DataFrame df_rn criado corretamente!")
+    else:
+      print("\033[91mErrado\033[0m: ")
+
+q6 = questao6
+
+df_brasil_teste = dfg11.count()
+porcen_rn_teste = (prop_number_teste[0] / df_brasil_teste['uriProposicao'])*100
+
+prop_number_brasil_teste = dfg11['nomeAutor'].value_counts()
+porcen_br_teste = (prop_number_brasil_teste[0] / df_brasil_teste['uriProposicao'])*100
+
+class questao7:
+  def solution():
+    print("""df_brasil = df.count()
+qnt = (prop_number[0] / df_brasil['uriProposicao'])*100
+print(qnt)
+
+prop_number_brasil = df['nomeAutor'].value_counts()
+qnt_brasil = (prop_number_brasil[0] / df_brasil['uriProposicao'])*100
+print(qnt_brasil)""")
+  def hint():
+    print("O método dataFame.count() mostra quantos elementos possui em uma determinada coluna, com isso, basta dividir\no primeiro elemento de series.value_counts() pela quantidade de elementros na coluna 'uriProposicao'")
+  def check():
+    if (porcen_rn_teste != porcen_rn):
+      print("\033[91mErrado\033[0m: porcen_rn não foi criado corretamente!")
+    elif (porcen_br_teste != porcen_br):
+      print("\033[91mErrado\033[0m: porcen_br não foi criado corretamente!")
+    else:
+      print("\033[92mCorreto\033[0m: Valores calculados de forma correta!")
+      
+q7 = questao7
+
+media_prop_teste = dfg11['nomeAutor'].value_counts().mean()
+
+class questao8:
+  def solution():
+    print("""media_prop = df['nomeAutor'].value_counts().mean()
+print(media_prop)
+print(prop_number[ prop_number > media_prop ] )""")
+  def hint():
+    print("Utilize o método mean() em dataFrame.value_counts()")
+  def check():
+    if(media_prop_teste == media_prop):
+      print("\033[92mCorreto\033[0m: Valor calculado de forma correta!")
+    else:
+      print("\033[91mErrado\033[0m: media_prop não foi criado corretamente!")
+
+q8 = questao8
+
+class questao9:
+  def solution():
+    print(print(df['tipoAutor'].value_counts()[:4]))
+  def hint():
+    print("Utilize o método series.value_count() em 'tipoAutor'.")
+  def check():
+    print("Nada à checkar!")
+    
+q9 = questao9
+
+max_partidos_teste = dfg11['siglaPartidoAutor'].value_counts()[:10]
+
+class questao10:
+  def solution():
+    print("""max_partido = df['siglaPartidoAutor'].value_counts()[:10]
+print(max_partido)""")
+  def hint():
+    print("Selecione os 10 primeiros itens do método series.value_count() da coluna 'siglaPartidoAutor'.")
+  def check():
+    if(str(max_partidos_teste) == str(max_partidos)):
+      print("\033[92mCorreto\033[0m: Parabéns, você finalizou o notebook!")
+    else:
+      print("\033[91mErrado\033[0m: max_partidos não foi criado corretamente!")
+
 print("\033[1mNotebook pronto para uso\033[0m")
