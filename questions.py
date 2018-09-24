@@ -20,6 +20,10 @@ class questao1:
     
 q1 = questao1
 
+df_2017 = ""
+df_2016 = ""
+df_2015 = ""
+
 class questao2:
   def solution():
     print("""Solução:
@@ -70,6 +74,7 @@ df_2016.info()""")
     
 q3 = questao3
 
+df = ""
 class questao4:
   def solution():
     print("Solução:\nFaça com que todas as tabelas sejam parte apenas da tabela df\ndf = df_2015.append(df_2016).append(df_2017)")
@@ -87,6 +92,7 @@ class questao4:
     
 q4 = questao4
 
+df_rn = ""
 df_rn_teste = dfg11[dfg11['siglaUFAutor'] == 'RN']
 class questao5:
   def solution():
@@ -105,6 +111,7 @@ class questao5:
 
 q5 = questao5
 
+prop_number = ""
 prop_number_teste = df_rn_teste['nomeAutor'].value_counts()
 class questao6:
   def solution():
@@ -125,9 +132,11 @@ q6 = questao6
 
 df_brasil_teste = dfg11.count()
 porcen_rn_teste = (prop_number_teste[0] / df_brasil_teste['uriProposicao'])*100
+porcen_rn = ""
 
 prop_number_brasil_teste = dfg11['nomeAutor'].value_counts()
 porcen_br_teste = (prop_number_brasil_teste[0] / df_brasil_teste['uriProposicao'])*100
+porcen_br = ""
 
 class questao7:
   def solution():
@@ -153,6 +162,7 @@ print(qnt_brasil)""")
 q7 = questao7
 
 media_prop_teste = dfg11['nomeAutor'].value_counts().mean()
+media_prop = ""
 
 class questao8:
   def solution():
@@ -184,6 +194,7 @@ class questao9:
 q9 = questao9
 
 max_partidos_teste = dfg11['siglaPartidoAutor'].value_counts()[:10]
+max_partidos = ""
 
 class questao10:
   def solution():
