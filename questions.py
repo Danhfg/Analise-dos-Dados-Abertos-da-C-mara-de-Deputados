@@ -25,14 +25,12 @@ class questao2:
     print("""Solução:
 # Importando os módulos
 import pandas as pd
-
 # Leia os databases por ano
-
+df_2017 = pd.read_csv('https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2017.csv', sep=';', index_col='idProposicao')
 df_2016 = pd.read_csv('https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2016.csv', sep=';', index_col='idProposicao')
 df_2015 = pd.read_csv('https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2015.csv', sep=';', index_col='idProposicao')
-
 # Imprima as 4 primeiras linhas de cada tabela
-
+print(df_2017.head(4))
 print(df_2016.head(4))
 df_2015.head(4)""")
   def hint():
@@ -42,9 +40,9 @@ df_2015.head(4)""")
       df7 = pd.read_csv('https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2017.csv', sep=';', index_col='idProposicao')
       df6 = pd.read_csv('https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2016.csv', sep=';', index_col='idProposicao')
       df5 = pd.read_csv('https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2015.csv', sep=';', index_col='idProposicao')
-#      if (str(df_2017) != str(df7)):
-#        print("\033[91mErrado\033[0m: a variável df_2017 não foi criada corretamente, certifique-se de utilizar o separador ';' e o index a coluna 'idProposicao'")
-#        return None
+      if (str(df_2017) != str(df7)):
+        print("\033[91mErrado\033[0m: a variável df_2017 não foi criada corretamente, certifique-se de utilizar o separador ';' e o index a coluna 'idProposicao'")
+        return None
       if (str(df_2016) != str(df6)):
         print("\033[91mErrado\033[0m: a variável df_2016 não foi criada corretamente, certifique-se de utilizar o separador ';' e o index a coluna 'idProposicao'")
         return None
@@ -52,7 +50,7 @@ df_2015.head(4)""")
         print("\033[91mErrado\033[0m: a variável df_2015 não foi criada corretamente, certifique-se de utilizar o separador ';' e o index a coluna 'idProposicao'")
         return None
       print("\033[92mCorreto\033[0m: DataFrames criados corretamente")
-    except:
+    except ValueError:
       print("\033[91mErrado\033[0m: as variável não foram criadas corretamente, certifique-se de utilizar o separador ';' e o index a coluna 'idProposicao'")
 
     
@@ -83,7 +81,7 @@ class questao4:
         print("\033[92mCorreto\033[0m: DataFrame df criado corretamente")
       else:
         print("\033[91mErrado\033[0m: a variável df não foi criada corretamente, certifique-se de juntar todos os 3 dataFrames (lembre-se de seguir a ordem 2015, 2016, 2017) )!")
-    except:
+    except ValueError:
       print("\033[91mErrado\033[0m: a variável df não foi criada corretamente, certifique-se de juntar todos os 3 dataFrames (lembre-se de seguir a ordem 2015, 2016, 2017) )!")
 
     
@@ -101,7 +99,7 @@ class questao5:
         print("\033[92mCorreto\033[0m: DataFrame df_rn criado corretamente")
       else:
         print("\033[91mErrado\033[0m: a variável df_rn não foi criada corretamente (verifique os nomes das colunas para identificar a correta e selecionar 'RN').")
-    except:
+    except ValueError:
       print("\033[91mErrado\033[0m: a variável df_rn não foi criada corretamente (verifique os nomes das colunas para identificar a correta e selecionar 'RN').")
 
 
@@ -119,7 +117,7 @@ class questao6:
         print("\033[92mCorreto\033[0m: DataFrame df_rn criado corretamente!")
       else:
         print("\033[91mErrado\033[0m: df_rn não foi criado corretamente!")
-    except:
+    except ValueError:
       print("\033[91mErrado\033[0m: df_rn não foi criado corretamente!")
 
 
@@ -136,7 +134,6 @@ class questao7:
     print("""df_brasil = df.count()
 qnt = (prop_number[0] / df_brasil['uriProposicao'])*100
 print(qnt)
-
 prop_number_brasil = df['nomeAutor'].value_counts()
 qnt_brasil = (prop_number_brasil[0] / df_brasil['uriProposicao'])*100
 print(qnt_brasil)""")
@@ -150,7 +147,7 @@ print(qnt_brasil)""")
         print("\033[91mErrado\033[0m: porcen_br não foi criado corretamente!")
       else:
         print("\033[92mCorreto\033[0m: Valores calculados de forma correta!")
-    except:
+    except ValueError:
       print("\033[91mErrado\033[0m: As variáveis não foram criadas corretamente!")
 
 q7 = questao7
@@ -170,7 +167,7 @@ print(prop_number[ prop_number > media_prop ] )""")
         print("\033[92mCorreto\033[0m: Valor calculado de forma correta!")
       else:
         print("\033[91mErrado\033[0m: media_prop não foi criado corretamente!")
-    except:
+    except ValueError:
       print("\033[91mErrado\033[0m: media_prop não foi criado corretamente!")
 
 
@@ -200,7 +197,7 @@ print(max_partido)""")
         print("\033[92mCorreto\033[0m: Parabéns, você finalizou o notebook!")
       else:
         print("\033[91mErrado\033[0m: max_partidos não foi criado corretamente!")
-    except:
+    except ValueError:
       print("\033[91mErrado\033[0m: max_partidos não foi criado corretamente!")
       
 q10 = questao10
