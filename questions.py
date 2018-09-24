@@ -41,9 +41,6 @@ df_2015.head(4)""")
     print("Importe o pandas como pd, depois utilize os métodos \033[1mpandas.read_cs()\033[0m e \033[1mdataFrame.head()\033[0m")
   def check():
     try:
-      df7 = pd.read_csv('https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2017.csv', sep=';', index_col='idProposicao')
-      df6 = pd.read_csv('https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2016.csv', sep=';', index_col='idProposicao')
-      df5 = pd.read_csv('https://dadosabertos.camara.leg.br/arquivos/proposicoesAutores/csv/proposicoesAutores-2015.csv', sep=';', index_col='idProposicao')
       if (str(df_2016) != str(df6)):
         print("\033[91mErrado\033[0m: a variável df_2016 não foi criada corretamente, certifique-se de utilizar o separador ';' e o index a coluna 'idProposicao'")
       elif (str(df_2017) != str(df7)):
